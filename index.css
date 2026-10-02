@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+/* Main App */
+.app {
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #0e4964;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Sections */
+.form-section,
+.employees-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2,
+.employees-section h2 {
+    color: #0e4964;
+    margin-bottom: 22px;
+    font-size: 24px;
+}
+
+/* Form */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #0e4964;
+    box-shadow: 0 0 0 2px rgba(14, 73, 100, 0.1);
+}
+
+/* Form Buttons */
+form > button {
+    grid-column: 1 / -1;
+    padding: 13px;
+    background-color: #0e4964;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form > button:hover {
+    background-color: #09384d;
+}
+
+/* Error Message */
+.error-message {
+    background-color: #ffe5e5;
+    color: #c0392b;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Employee List */
+.employee-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Employee Card */
+.employee-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fafafa;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.employee-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.employee-card h3 {
+    color: #0e4964;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.employee-card p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.employee-card strong {
+    color: #555;
+}
+
+/* Buttons */
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.edit-button,
+.delete-button,
+.cancel-button {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.edit-button {
+    background-color: #0e4964;
+    color: white;
+}
+
+.delete-button {
+    background-color: #c0392b;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #777;
+    color: white;
+}
+
+.edit-button:hover,
+.delete-button:hover,
+.cancel-button:hover {
+    opacity: 0.85;
+}
+
+/* Empty Message */
+.empty-message {
+    text-align: center;
+    color: #777;
+    padding: 25px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .employee-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .form-section,
+    .employees-section {
+        padding: 20px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-list {
+        grid-template-columns: 1fr;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .edit-button,
+    .delete-button {
+        width: 100%;
+    }
+}
